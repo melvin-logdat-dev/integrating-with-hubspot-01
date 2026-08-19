@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title Custom Object Table
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    h1.home-title Custom Object Table
+    a.button-link(href="/update-cobj") Add/Update this table
+    table.table-game
+      thead
+        tr
+          th Name
+          th Publisher
+          th Price
+      tbody
+        each game in data
+          tr
+            td #{game.properties.name}
+            td #{game.properties.publisher}
+            td #{game.properties.price}

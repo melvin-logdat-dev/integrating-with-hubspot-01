@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title #{title}
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    h1.home-title Add a New Game
+    div.game-form-container
+      form(action="/update-cobj", method="POST")
+        label(for="name") Name:
+        input(type="text", name="name", required)
+        br
+        label(for="publisher") Publisher:
+        input(type="text", name="publisher", required)
+        br
+        label(for="price") Price:
+        input(type="number", name="price", required)
+        br
+        input(type="submit", value="Submit")
+      br
+    a.button-link(href="/") Return to the homepage
